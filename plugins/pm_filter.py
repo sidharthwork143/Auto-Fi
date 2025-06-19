@@ -1102,7 +1102,7 @@ async def auto_filter(client, msg, s, spoll=False):
         ]   
     if offset != "":
         if settings['shortlink'] and not await is_premium(message.from_user.id, client):
-        btn.append(
+        btn.append(0,
             [InlineKeyboardButton(text=f"1/{math.ceil(int(total_results) / MAX_BTN)}", callback_data="buttons"),
              InlineKeyboardButton(text="ɴᴇxᴛ »", callback_data=f"next_{req}_{key}_{offset}")]
         )
