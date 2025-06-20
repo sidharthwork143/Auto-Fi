@@ -1059,8 +1059,8 @@ async def auto_filter(client, msg, s, spoll=False):
     )
     else:
         if settings['shortlink'] and not await is_premium(message.from_user.id, client):
-    btn.append(
-        [InlineKeyboardButton('🤑 Buy Premium', url=f"https://t.me/{temp.U_NAME}?start=premium")]
+           btn.append(
+               [InlineKeyboardButton('🤑 Buy Premium', url=f"https://t.me/{temp.U_NAME}?start=premium")]
     )
     imdb = await get_poster(search, file=(files[0])['file_name']) if settings["imdb"] else None
     TEMPLATE = settings['template']
